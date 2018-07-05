@@ -115,8 +115,8 @@ for offset in range(0, estNumResults, GROUP_SIZE):
 
             # build the path to the output image
             ext = v["contentUrl"][v["contentUrl"].rfind("."):]
-            score = os.path.sep.join([output_dir, "{}{}".format(
-                str(total).zfill(8), ext)])
+            score = os.path.sep.join([output_dir,
+                                      f"movie_{str(id)}_{str(total).zfill(8)}{ext}"])
 
             # write the image to disk
             f = open(score, "wb")
